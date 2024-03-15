@@ -8,7 +8,7 @@ const getExportacion=async(req,res)=>{
     })
 }
 const postExportacion =async(req,res)=>{
-    const info = req.body
+    const info = req.query
     let mensaje = 'Insercion exitosa'
     try {
         const exportacion = new informar(info) //Instanciar el objeto
@@ -23,7 +23,7 @@ const postExportacion =async(req,res)=>{
     })
 }
 const putExportacion =async(req,res)=>{
-    const {producto,kilos,precio,precioDolar}=req.body
+    const {producto,kilos,precio,precioDolar}=req.query
     let mensaje ='actualizacion Exitosa'
     try{
         const exportacion = await informar.findOneAndUpdate({producto:producto},{kilos:kilos,precio:precio,precioDolar:precioDolar});
@@ -37,7 +37,7 @@ const putExportacion =async(req,res)=>{
     })
 }
 const deleteExportacion = async(req,res)=>{
-    const {producto}=req.body
+    const {producto}=req.query
     let mensaje= ''
     try{
         const exportacion = await informar.findOneAndDelete({producto})
