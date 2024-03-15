@@ -8,16 +8,16 @@ const ExportacionSchema = ({
 
     },
     kilos: {
-        type: String,
+        type: double,
         required: [true, 'Los Kilos son requeridos ']
     },
     precio: {
-        type: String,
+        type:Number,
         required: [true, 'El Precio es requerido'],
         
     },
     precioDolar: {
-        type: String,
+        type: Number,
         required: [
             true, 'El precio no fue capturado'
         ]
