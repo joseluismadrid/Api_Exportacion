@@ -2,13 +2,12 @@ const { Schema, model } = require('mongoose')
 
 const ExportacionSchema = ({
     producto: {
-        type: String,
-        unique: true,
+        type: String,        
         required: [true, 'El Producto Es requerido']
 
     },
     kilos: {
-        type: double,
+        type: Number,
         required: [true, 'Los Kilos son requeridos ']
     },
     precio: {
